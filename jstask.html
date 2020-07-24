@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Registration form</title>
+<link rel="stylesheet"  href="jts.css">
+<script>
+function checkName(){
+var x = document.getElementById("name").value;
+if(x.length==0)
+{
+alert("name field must be filled");
+}
+}
+function checkAge()
+{
+var age = document.getElementById("age").value;
+
+if(age <18)
+{
+alert("Age should be greater than 18");
+}
+}
+function checkContactNumber()
+{
+var c = document.getElementById("mn").value;
+if(c.length <10)
+{
+alert("mobile number should be of length 10");
+}
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>Registration form</h1>
+</div>
+<div class="details">
+<form> 
+<input type = "text" placeholder="full name" id = "name" onfocusout = checkName() required><br><br>
+<input type = "text" placeholder="age" id ="age" onfocusout = checkAge() required><br><br>
+<input type = "email" placeholder="email" name = "email" required><br><br>
+<input type = "text" name="number" placeholder="mobile number" id ="mn" onfocusout = checkContactNumber() required><br><br>
+<input type = "submit">
+</form>
+</div>
+</div>
+</body>
+</html>
